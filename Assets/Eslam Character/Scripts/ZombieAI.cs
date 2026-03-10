@@ -170,6 +170,7 @@ public class ZombieAI : MonoBehaviour
                 spellEffect.transform.position = castPoint.position;
                 spellEffect.transform.rotation = castPoint.rotation;
                 spellEffect.Play();
+                health.Health.TakeHeal(10);
             }else
             {
                 spellEffect.transform.position = player.position;
@@ -190,7 +191,6 @@ public class ZombieAI : MonoBehaviour
     public void DealMeleeDamage()
     {
         if (player == null) return;
-
         float distance = Vector3.Distance(transform.position, player.position);
 
         if (distance <= meleeRange)
