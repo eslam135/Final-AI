@@ -5,17 +5,19 @@ using BBUnity.Conditions;
 [Condition("Banshee/Is Dead")]
 public class Condition_IsDead : GOCondition
 {
-    private BansheeHealth healthScript;
+    private HealthView healthView;
 
     public override bool Check()
     {
-        if (healthScript == null)
+        if (healthView == null)
+            healthView = gameObject.GetComponent<HealthView>();
+
+        if (healthView == null)
         {
-            healthScript = gameObject.GetComponent<BansheeHealth>();
+            Debug.LogWarning("HealthView component not found!");
+            return false;
         }
 
-        if (healthScript == null) return false;
-
-        return healthScript.isDead;
+        return healthView.Health.currentHealth <= 0;
     }
 }
