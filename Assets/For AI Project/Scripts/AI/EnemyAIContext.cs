@@ -102,13 +102,13 @@ public class EnemyAIContext : MonoBehaviour
 
     private void Update()
     {
-        // Passive mana regen
-        if (mana < maxMana)
-            mana = Mathf.Min(mana + manaRegenRate * Time.deltaTime, maxMana);
         if (healthView != null && healthView.GetHealth() <= 0)
         {
             return;
         }
+        // Passive mana regen
+        if (mana < maxMana)
+            mana = Mathf.Min(mana + manaRegenRate * Time.deltaTime, maxMana);
     }
 
     // ── Action management (call these from your GOAP executor) ─────────────────
