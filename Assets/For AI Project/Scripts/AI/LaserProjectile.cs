@@ -14,11 +14,11 @@ public class LaserProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerHealth hp = other.GetComponent<PlayerHealth>();
+   /*     var hp = other.GetComponent<HealthView>().Health;
         if (hp != null)
         {
             hp.TakeDamage(damage);
-        }
+        }*/
         Destroy(gameObject);
     }
 }

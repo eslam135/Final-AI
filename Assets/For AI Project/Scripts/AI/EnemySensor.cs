@@ -32,7 +32,7 @@ public class EnemySensor : MonoBehaviour
         {
             Vector3 eyePos = transform.position + Vector3.up * 1.5f;
             Vector3 playerChest = _ctx.player.position + Vector3.up * 1.0f;
-            wallBetween = Physics.Linecast(eyePos, playerChest, _ctx.wallLayer);
+            wallBetween = Physics.Linecast(eyePos, playerChest);
         }
         _world.Set("wallBetweenPlayer", wallBetween);
 

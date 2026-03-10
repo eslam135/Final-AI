@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1824111458903504223}
   - component: {fileID: 2976426182158390527}
   - component: {fileID: -5568912634642689512}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LaserProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,9 +162,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4179696900644460523}
     m_Modifications:
+    - target: {fileID: 1017566096282904768, guid: bc142210df3ec4545a4e3e1f21e00da7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3473529909581181512, guid: bc142210df3ec4545a4e3e1f21e00da7, type: 3}
       propertyPath: m_Name
       value: vfx_Projectile_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473529909581181512, guid: bc142210df3ec4545a4e3e1f21e00da7, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4559080999636468818, guid: bc142210df3ec4545a4e3e1f21e00da7, type: 3}
       propertyPath: m_LocalScale.x
@@ -216,6 +224,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4559080999636468818, guid: bc142210df3ec4545a4e3e1f21e00da7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287990389288925174, guid: bc142210df3ec4545a4e3e1f21e00da7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139904261238893799, guid: bc142210df3ec4545a4e3e1f21e00da7, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

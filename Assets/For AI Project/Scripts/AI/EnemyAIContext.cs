@@ -20,6 +20,7 @@ public class EnemyAIContext : MonoBehaviour
     public float health = 100f;
     public float maxHealth = 100f;
     public float healAmount = 20f;
+    HealthView healthView;
 
     [Header("Mana")]
     public float mana = 20f;
@@ -74,6 +75,7 @@ public class EnemyAIContext : MonoBehaviour
     private AudioSource _audioSource;
 
     // ─────────────────────────────────────────────────────────────────────────
+    
     private void Awake()
     {
         // Animation event receiver (must be on same GO as Animator)
@@ -94,6 +96,8 @@ public class EnemyAIContext : MonoBehaviour
         // Wire AudioSource into every GoapAction on this GameObject
         foreach (var action in GetComponents<GoapAction>())
             action.audioSource = _audioSource;
+        healthView = GetComponentInChildren<HealthView>();
+
     }
 
     private void Update()
@@ -101,6 +105,10 @@ public class EnemyAIContext : MonoBehaviour
         // Passive mana regen
         if (mana < maxMana)
             mana = Mathf.Min(mana + manaRegenRate * Time.deltaTime, maxMana);
+        if (healthView != null && healthView.GetHealth() <= 0)
+        {
+            return;
+        }
     }
 
     // ── Action management (call these from your GOAP executor) ─────────────────
