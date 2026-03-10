@@ -1,0 +1,368 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed5864476f84ce4b85454db09ca4eaa, type: 3}
+  m_Name: graph_0
+  m_EditorClassIdentifier: Adobe.Substance::Adobe.Substance.SubstanceGraphSO
+  AssetPath: Assets/blood-tiles.sbsar
+  RawData: {fileID: -244192453324840774, guid: d0469e204f2f23c4180f2affc97aee3a, type: 3}
+  Name: graph_0
+  IsRoot: 1
+  FlagedForDelete: 0
+  GUID: 3e6ddd75-0892-4ac0-b788-ed13c4b51c48
+  Index: 0
+  Input:
+  - rid: 1576365660200763800
+  - rid: 1576365660200763801
+  - rid: 1576365660200763802
+  - rid: 1576365660200763803
+  - rid: 1576365660200763804
+  - rid: 1576365660200763805
+  - rid: 1576365660200763806
+  - rid: 1576365660200763807
+  - rid: 1576365660200763808
+  Output:
+  - Index: 0
+    VirtualOutputIndex: 12
+    Description:
+      Identifier: diffuse
+      Label: diffuse
+      Index: 0
+      Type: 8
+      Channel: diffuse
+    OutputTexture: {fileID: 2800000, guid: 9f7234b9c0ecf464e8f11853c706064c, type: 3}
+    sRGB: 1
+    IsVirtual: 0
+    IsAlphaAssignable: 1
+    AlphaChannel: opacity
+    InvertAssignedAlpha: 0
+    Flags: 0
+    MaterialTextureTarget: _BaseMap
+  - Index: 1
+    VirtualOutputIndex: 13
+    Description:
+      Identifier: basecolor
+      Label: basecolor
+      Index: 1
+      Type: 8
+      Channel: baseColor
+    OutputTexture: {fileID: 2800000, guid: 928a7279b2d605a438b2317178d16f08, type: 3}
+    sRGB: 1
+    IsVirtual: 0
+    IsAlphaAssignable: 1
+    AlphaChannel: opacity
+    InvertAssignedAlpha: 0
+    Flags: 0
+    MaterialTextureTarget: _BaseMap
+  - Index: 2
+    VirtualOutputIndex: 14
+    Description:
+      Identifier: specular
+      Label: specular
+      Index: 2
+      Type: 8
+      Channel: specular
+    OutputTexture: {fileID: 2800000, guid: 43775a823c4d64349af1f74e7d95e69f, type: 3}
+    sRGB: 1
+    IsVirtual: 0
+    IsAlphaAssignable: 1
+    AlphaChannel: roughness
+    InvertAssignedAlpha: 1
+    Flags: 0
+    MaterialTextureTarget: _SpecGlossMap
+  - Index: 3
+    VirtualOutputIndex: 15
+    Description:
+      Identifier: normal
+      Label: normal
+      Index: 3
+      Type: 8
+      Channel: normal
+    OutputTexture: {fileID: 2800000, guid: f7302f0b1e33c204b8ad2bd7216a1aa2, type: 3}
+    sRGB: 0
+    IsVirtual: 0
+    IsAlphaAssignable: 0
+    AlphaChannel: 
+    InvertAssignedAlpha: 0
+    Flags: 0
+    MaterialTextureTarget: _BumpMap
+  - Index: 4
+    VirtualOutputIndex: 16
+    Description:
+      Identifier: emissive
+      Label: emissive
+      Index: 4
+      Type: 8
+      Channel: emissive
+    OutputTexture: {fileID: 2800000, guid: 867ee145d9848ec41af15b928dcefe65, type: 3}
+    sRGB: 1
+    IsVirtual: 0
+    IsAlphaAssignable: 1
+    AlphaChannel: 
+    InvertAssignedAlpha: 0
+    Flags: 0
+    MaterialTextureTarget: _EmissionMap
+  - Index: 5
+    VirtualOutputIndex: 17
+    Description:
+      Identifier: glossiness
+      Label: glossiness
+      Index: 5
+      Type: 8
+      Channel: glossiness
+    OutputTexture: {fileID: 0}
+    sRGB: 0
+    IsVirtual: 0
+    IsAlphaAssignable: 1
+    AlphaChannel: 
+    InvertAssignedAlpha: 0
+    Flags: 0
+    MaterialTextureTarget: _GlossinessMap
+  - Index: 6
+    VirtualOutputIndex: 18
+    Description:
+      Identifier: roughness
+      Label: roughness
+      Index: 6
+      Type: 8
+      Channel: roughness
+    OutputTexture: {fileID: 0}
+    sRGB: 0
+    IsVirtual: 0
+    IsAlphaAssignable: 1
+    AlphaChannel: 
+    InvertAssignedAlpha: 0
+    Flags: 0
+    MaterialTextureTarget: _RoughnessMap
+  - Index: 7
+    VirtualOutputIndex: 19
+    Description:
+      Identifier: metallic
+      Label: metallic
+      Index: 7
+      Type: 8
+      Channel: metallic
+    OutputTexture: {fileID: 2800000, guid: e6697f28adad5704da2b958c693e823a, type: 3}
+    sRGB: 0
+    IsVirtual: 0
+    IsAlphaAssignable: 1
+    AlphaChannel: roughness
+    InvertAssignedAlpha: 1
+    Flags: 0
+    MaterialTextureTarget: _MetallicGlossMap
+  - Index: 8
+    VirtualOutputIndex: 20
+    Description:
+      Identifier: specularlevel
+      Label: specularlevel
+      Index: 8
+      Type: 8
+      Channel: specularLevel
+    OutputTexture: {fileID: 0}
+    sRGB: 0
+    IsVirtual: 0
+    IsAlphaAssignable: 1
+    AlphaChannel: 
+    InvertAssignedAlpha: 0
+    Flags: 0
+    MaterialTextureTarget: 
+  - Index: 9
+    VirtualOutputIndex: 21
+    Description:
+      Identifier: ambientocclusion
+      Label: ambientocclusion
+      Index: 9
+      Type: 8
+      Channel: ambientOcclusion
+    OutputTexture: {fileID: 2800000, guid: a0a83ca11db8a3a418cbb3ee3f910351, type: 3}
+    sRGB: 0
+    IsVirtual: 0
+    IsAlphaAssignable: 1
+    AlphaChannel: 
+    InvertAssignedAlpha: 0
+    Flags: 0
+    MaterialTextureTarget: _OcclusionMap
+  - Index: 10
+    VirtualOutputIndex: 22
+    Description:
+      Identifier: height
+      Label: height
+      Index: 10
+      Type: 8
+      Channel: height
+    OutputTexture: {fileID: 2800000, guid: ca7bd27b79db3bf46831719954bb6d67, type: 3}
+    sRGB: 1
+    IsVirtual: 0
+    IsAlphaAssignable: 1
+    AlphaChannel: 
+    InvertAssignedAlpha: 0
+    Flags: 0
+    MaterialTextureTarget: _ParallaxMap
+  - Index: 11
+    VirtualOutputIndex: 23
+    Description:
+      Identifier: opacity
+      Label: opacity
+      Index: 11
+      Type: 8
+      Channel: opacity
+    OutputTexture: {fileID: 0}
+    sRGB: 0
+    IsVirtual: 0
+    IsAlphaAssignable: 1
+    AlphaChannel: 
+    InvertAssignedAlpha: 0
+    Flags: 0
+    MaterialTextureTarget: _OpacityMap
+  HasPhysicalSize: 0
+  PhysicalSize: {x: 0, y: 0, z: 0}
+  EnablePhysicalSize: 0
+  Thumbnail: 
+  CurrentStatePreset: 
+  IsRuntimeOnly: 0
+  GenerateAllOutputs: 0
+  GenerateAllMipmaps: 1
+  OutputMaterial: {fileID: 2100000, guid: 0312f6a2d5eea6242aff34caf303b4c7, type: 2}
+  DefaultPreset: " <sbspreset pkgurl=\"pkg://Substance_graph\" label=\"\" >\n  <presetinput
+    identifier=\"$outputsize\" uid=\"3795302352\" type=\"8\" value=\"10,10\" />\n
+    </sbspreset>\n"
+  MaterialShader: Universal Render Pipeline/Lit
+  RenderTextures: 0
+  OutputRemaped: 0
+  Presets: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 1576365660200763800
+      type: {class: SubstanceInputInt2, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 0
+        Description:
+          Identifier: $outputsize
+          Label: $outputsize
+          GuiGroup: 
+          GuiDescription: 
+          Type: 5
+          WidgetType: 0
+        Data: {x: 10, y: 10}
+        NumericalDescription:
+          DefaultValue: {x: 8, y: 8}
+          MinValue: {x: 0, y: 0}
+          MaxValue: {x: 1, y: 1}
+          SliderClamp: 0
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 1576365660200763801
+      type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 1
+        Description:
+          Identifier: $randomseed
+          Label: $randomseed
+          GuiGroup: 
+          GuiDescription: 
+          Type: 4
+          WidgetType: 0
+        Data: 0
+        NumericalDescription:
+          DefaultValue: 0
+          MinValue: 0
+          MaxValue: 1
+          SliderStep: 0.01
+          SliderClamp: 0
+          LabelFalse: 
+          LabelTrue: 
+          EnumValueCount: 0
+          EnumValues: []
+    - rid: 1576365660200763802
+      type: {class: SubstanceInputTexture, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 2
+        Description:
+          Identifier: difuse
+          Label: Diffuse
+          GuiGroup: Material
+          GuiDescription: 
+          Type: 8
+          WidgetType: 7
+        Data: {fileID: 0}
+    - rid: 1576365660200763803
+      type: {class: SubstanceInputTexture, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 3
+        Description:
+          Identifier: specular
+          Label: Specular
+          GuiGroup: Material
+          GuiDescription: 
+          Type: 8
+          WidgetType: 7
+        Data: {fileID: 0}
+    - rid: 1576365660200763804
+      type: {class: SubstanceInputTexture, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 4
+        Description:
+          Identifier: emissive
+          Label: Emissive
+          GuiGroup: Material
+          GuiDescription: 
+          Type: 8
+          WidgetType: 7
+        Data: {fileID: 0}
+    - rid: 1576365660200763805
+      type: {class: SubstanceInputTexture, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 5
+        Description:
+          Identifier: glossiness
+          Label: Glossiness
+          GuiGroup: Material
+          GuiDescription: 
+          Type: 8
+          WidgetType: 7
+        Data: {fileID: 0}
+    - rid: 1576365660200763806
+      type: {class: SubstanceInputTexture, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 6
+        Description:
+          Identifier: specularlevel
+          Label: Specular Level
+          GuiGroup: Material
+          GuiDescription: 
+          Type: 8
+          WidgetType: 7
+        Data: {fileID: 0}
+    - rid: 1576365660200763807
+      type: {class: SubstanceInputTexture, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 7
+        Description:
+          Identifier: ambientocclusion
+          Label: Ambient Occlusion
+          GuiGroup: Material
+          GuiDescription: 
+          Type: 8
+          WidgetType: 7
+        Data: {fileID: 0}
+    - rid: 1576365660200763808
+      type: {class: SubstanceInputTexture, ns: Adobe.Substance.Input, asm: Adobe.Substance}
+      data:
+        Index: 8
+        Description:
+          Identifier: opacity
+          Label: Opacity
+          GuiGroup: Material
+          GuiDescription: 
+          Type: 8
+          WidgetType: 7
+        Data: {fileID: 0}
