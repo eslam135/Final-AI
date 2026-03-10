@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MutantAttack : MonoBehaviour
+public class MeleeAttack : MonoBehaviour
 {
     private Transform player;
     private float meleeRange = 3.0f;
@@ -16,6 +16,7 @@ public class MutantAttack : MonoBehaviour
             HealthView playerHealth = player.GetComponent<HealthView>();
             if (playerHealth != null)
             {
+                Debug.Log(playerHealth.GetHealth());
                 playerHealth.Health.TakeDamage(meleeDamage);
             }
         }

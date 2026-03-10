@@ -1040,6 +1040,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1690690789247503553, guid: 7867bf429c4d22a48b61a8bb0f14a8b3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2241357433588438378, guid: 7867bf429c4d22a48b61a8bb0f14a8b3, type: 3}
       propertyPath: m_Name
       value: Zombiegirl W Kurniawan
@@ -1048,10 +1052,20 @@ PrefabInstance:
       propertyPath: 'blackboard.objectParams.Array.data[0]'
       value: 
       objectReference: {fileID: 2082377939}
+    - target: {fileID: 4778783888085833844, guid: 7867bf429c4d22a48b61a8bb0f14a8b3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2241357433588438378, guid: 7867bf429c4d22a48b61a8bb0f14a8b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1626263394}
+    - targetCorrespondingSourceObject: {fileID: 4778783888085833844, guid: 7867bf429c4d22a48b61a8bb0f14a8b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2139525850}
   m_SourcePrefab: {fileID: 100100000, guid: 7867bf429c4d22a48b61a8bb0f14a8b3, type: 3}
 --- !u!1 &779866636
 GameObject:
@@ -3136,6 +3150,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2241357433588438378, guid: 7867bf429c4d22a48b61a8bb0f14a8b3, type: 3}
   m_PrefabInstance: {fileID: 737908811}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1626263394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626263385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f84d3a6c7bbc4746a5d50e1cd12fcc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MeleeAttack
 --- !u!1 &1631159356
 GameObject:
   m_ObjectHideFlags: 0
@@ -4378,6 +4404,7 @@ GameObject:
   - component: {fileID: 2082377944}
   - component: {fileID: 2082377946}
   - component: {fileID: 2082377947}
+  - component: {fileID: 2082377948}
   m_Layer: 0
   m_Name: Player Armature
   m_TagString: Player
@@ -4687,7 +4714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a516c9f42c9f642bdd1843677fba99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthView
-  maxHealth: 100
+  maxHealth: 20000
 --- !u!136 &2082377945
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4745,6 +4772,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2082377948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082377937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 789aea6608b78cd4190151f8541a384a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &2105035520
 GameObject:
   m_ObjectHideFlags: 0
@@ -4882,6 +4921,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105035520}
   m_CullTransparentMesh: 1
+--- !u!1 &2139525846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4778783888085833844, guid: 7867bf429c4d22a48b61a8bb0f14a8b3, type: 3}
+  m_PrefabInstance: {fileID: 737908811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &2139525850
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139525846}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.6939529
+  m_Center: {x: -0.13, y: -0.30603772, z: -0.00000007282272}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

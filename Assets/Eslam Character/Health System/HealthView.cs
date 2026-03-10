@@ -14,10 +14,7 @@ public class HealthView : MonoBehaviour
         // Health.OnDamaged += HandleDamage;
         // Health.OnHealed += HandleHeal;
     }
-    private void Update()
-    {
-        Debug.Log(Health.currentHealth);
-    }
+
     public void HandleDeath()
     {
         gameObject.GetComponent<Animator>()?.Play("Death");
@@ -32,21 +29,5 @@ public class HealthView : MonoBehaviour
     {
         return Health.currentHealth;
     }
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other.name + " entered the capsule trigger.");
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("Spikes"))
-        {
-            Health.TakeDamage(15.0f);
-        }
-        if (other.gameObject.layer == LayerMask.NameToLayer("Projectile"))
-        {
-            Health.TakeDamage(10.0f);
-        }
-        if (other.gameObject.layer == LayerMask.NameToLayer("Melee"))
-        {
-            Health.TakeDamage(5.0f);
-        }
-    }
 }
