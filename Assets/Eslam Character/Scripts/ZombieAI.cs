@@ -30,6 +30,7 @@ public class ZombieAI : MonoBehaviour
     private bool fleeTargetSet;
 
     private float lastSpellTime;
+    public float meleeDamage = 10f;
 
     void Awake()
     {
@@ -41,7 +42,7 @@ public class ZombieAI : MonoBehaviour
     void Update()
     {
         if (player == null) return;
-
+        if(!agent.isOnNavMesh) return;
         float distance = Vector3.Distance(transform.position, player.position);
         bool lowHP = health != null && health.GetHealth() < 20;
         if (health != null && health.GetHealth() <= 0)
@@ -186,7 +187,21 @@ public class ZombieAI : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    public void DealMeleeDamage()
+    {
+        if (player == null) return;
 
+        float distance = Vector3.Distance(transform.position, player.position);
+
+        if (distance <= meleeRange)
+        {
+            HealthView playerHealth = player.GetComponent<HealthView>();
+            if (playerHealth != null)
+            {
+                playerHealth.Health.TakeDamage(meleeDamage);
+            }
+        }
+    }
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

@@ -55,7 +55,7 @@ public class EnemyController : MonoBehaviour
     private void UpdateSeek()
     {
         if (_ctx.player == null) return;
-
+        if (!_agent.isOnNavMesh) return;
         _agent.SetDestination(_ctx.player.position);
         FaceTarget(_ctx.player.position);
 
