@@ -3844,6 +3844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50200db66165b9f429b0bd2c6894f1db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandleBookHeadDeath
+  parent: {fileID: 1950841158}
 --- !u!114 &1973314569
 MonoBehaviour:
   m_ObjectHideFlags: 0
