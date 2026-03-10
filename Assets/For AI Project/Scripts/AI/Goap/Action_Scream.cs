@@ -62,7 +62,7 @@ public class Action_Scream : GoapAction
     private void ApplyKnockback(EnemyAIContext ctx)
     {
         // Damage
-        var hp = ctx.player.GetComponent<PlayerHealth>();
+        var hp = ctx.player.GetComponent<HealthView>().Health;
         if (hp != null)
             hp.TakeDamage(ctx.screamDamage);
 

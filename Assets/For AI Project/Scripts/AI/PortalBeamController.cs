@@ -92,7 +92,7 @@ public class PortalBeamController : MonoBehaviour
 
         foreach (var hit in hits)
         {
-            PlayerHealth hp = hit.GetComponent<PlayerHealth>();
+            var hp = hit.GetComponent<HealthView>()?.Health;
             if (hp != null)
             {
                 hp.TakeDamage(_damage * 0.2f); // damage per tick 

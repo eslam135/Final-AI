@@ -19,7 +19,7 @@ public class HealthView : MonoBehaviour
     }
     private void HandleDeath()
     {
-        gameObject.GetComponent<Animator>().Play("Death");
+        gameObject.GetComponent<Animator>()?.Play("Death");
     }
     public void setFalse()
     {
