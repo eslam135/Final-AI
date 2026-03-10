@@ -10,7 +10,7 @@ public class Action_Scream : GoapAction
     private void Awake()
     {
         actionName = "Scream";
-        cost = 1f; // highest priority when valid (player is close = danger)
+        cost = 1f;
 
         preconditions.Add("playerDetected", true);
         preconditions.Add("playerClose", true);
@@ -23,13 +23,12 @@ public class Action_Scream : GoapAction
         _timer = 0f;
         _appliedEffect = false;
 
-        // Spend mana
         ctx.TrySpendMana(ctx.screamManaCost);
         ctx.lastScreamTime = Time.time;
         base.PlayWindup();
-        // Animation
+
         ctx.animator?.SetTrigger("Scream");
-        // Spawn scream VFX (expanding ring / shockwave)
+
         if (ctx.screamVFXPrefab != null)
         {
             Vector3 spawnPos = ctx.transform.position + Vector3.up * 1f;
@@ -45,51 +44,45 @@ public class Action_Scream : GoapAction
     {
         _timer += Time.deltaTime;
 
-        // Apply knockback at the peak of the scream (0.3s in)
         if (!_appliedEffect && _timer >= 0.3f)
         {
             _appliedEffect = true;
             OnAnimationHit(ctx);
         }
 
-        // Action duration
         return _timer >= 1.0f;
     }
+
     public override void OnAnimationHit(EnemyAIContext ctx)
     {
-        base.OnAnimationHit(ctx); // plays hitClip
+        base.OnAnimationHit(ctx);
         ApplyKnockback(ctx);
     }
+
     private void ApplyKnockback(EnemyAIContext ctx)
     {
-        if (ctx.playerRigidbody == null)
-        {
-            ctx.playerRigidbody = ctx.player.GetComponent<Rigidbody>();
-        }
-
-        if (ctx.playerRigidbody != null)
-        {
-            // Direction from enemy to player
-            Vector3 knockDir = (ctx.player.position - ctx.transform.position).normalized;
-            knockDir.y = 0.3f; // slight upward arc
-            knockDir.Normalize();
-
-            ctx.playerRigidbody.AddForce(knockDir * ctx.screamKnockbackForce, ForceMode.Impulse);
-        }
-
-        // Also apply damage
+        // Damage
         var hp = ctx.player.GetComponent<PlayerHealth>();
         if (hp != null)
             hp.TakeDamage(ctx.screamDamage);
 
-        // Screen shake hook (implement in your camera controller)
-        // CameraShake.Instance?.Shake(0.5f, 0.3f);
+        // Knockback via KnockbackReceiver — no Rigidbody needed
+        var kb = ctx.player.GetComponent<KnockbackReceiver>();
+        if (kb == null)
+        {
+            Debug.LogWarning($"[{ctx.name}] Player has no KnockbackReceiver — knockback skipped.");
+            return;
+        }
+
+        Vector3 knockDir = (ctx.player.position - ctx.transform.position).normalized;
+        knockDir.y = 0.3f;   // slight upward arc
+        knockDir.Normalize();
+
+        kb.ApplyKnockback(knockDir * ctx.screamKnockbackForce);
     }
-    
 
     public override void OnEnd(EnemyAIContext ctx)
     {
         base.OnAnimationRecovery(ctx);
-        // VFX auto-destroys
     }
 }

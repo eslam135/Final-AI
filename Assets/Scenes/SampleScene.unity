@@ -837,18 +837,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActionAnimationReceiver
   context: {fileID: 0}
   currentAction: {fileID: 0}
---- !u!114 &598559617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950841159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Animation.Rigging::UnityEngine.Animations.Rigging.BoneRenderer
 --- !u!1 &885996714
 GameObject:
   m_ObjectHideFlags: 0
@@ -2905,7 +2893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 939dd2b1b2633e840b9645b503fa3457, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -47.6
+      value: -12.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 939dd2b1b2633e840b9645b503fa3457, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2913,7 +2901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 939dd2b1b2633e840b9645b503fa3457, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 90.02
+      value: 73.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 939dd2b1b2633e840b9645b503fa3457, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3383,9 +3371,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 939dd2b1b2633e840b9645b503fa3457, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1950841171}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 939dd2b1b2633e840b9645b503fa3457, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1950841170}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 939dd2b1b2633e840b9645b503fa3457, type: 3}
       insertIndex: -1
@@ -3419,10 +3404,16 @@ PrefabInstance:
       addedObject: {fileID: 598559615}
     - targetCorrespondingSourceObject: {fileID: -5151492872390713093, guid: 939dd2b1b2633e840b9645b503fa3457, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 598559617}
+      addedObject: {fileID: 598559616}
     - targetCorrespondingSourceObject: {fileID: -5151492872390713093, guid: 939dd2b1b2633e840b9645b503fa3457, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 598559616}
+      addedObject: {fileID: 1973314567}
+    - targetCorrespondingSourceObject: {fileID: -5151492872390713093, guid: 939dd2b1b2633e840b9645b503fa3457, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1973314569}
+    - targetCorrespondingSourceObject: {fileID: -5151492872390713093, guid: 939dd2b1b2633e840b9645b503fa3457, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1973314570}
   m_SourcePrefab: {fileID: 100100000, guid: 939dd2b1b2633e840b9645b503fa3457, type: 3}
 --- !u!1 &1950841158 stripped
 GameObject:
@@ -3704,7 +3695,7 @@ MonoBehaviour:
   screamManaCost: 5
   laserManaCost: 5
   portalBeamManaCost: 5
-  screamKnockbackForce: 5
+  screamKnockbackForce: 50
   screamDamage: 8
   screamVFXPrefab: {fileID: 9080140021571130472, guid: 82066d902ed0dd6488ddfd32eb994801, type: 3}
   laserDamage: 20
@@ -3758,13 +3749,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 94
   m_CollisionDetection: 0
---- !u!136 &1950841171
-CapsuleCollider:
+--- !u!114 &1973314567
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950841158}
+  m_GameObject: {fileID: 1950841159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50200db66165b9f429b0bd2c6894f1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HandleBookHeadDeath
+--- !u!114 &1973314569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950841159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a516c9f42c9f642bdd1843677fba99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthView
+--- !u!65 &1973314570
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950841159}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -3776,11 +3791,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.18
-  m_Height: 1.8
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.88, z: 0}
+  serializedVersion: 3
+  m_Size: {x: 0.42095265, y: 0.27224723, z: 1.8081135}
+  m_Center: {x: 0.0045236796, y: -0.023909543, z: 0.9026707}
 --- !u!1 &2082377937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3794,6 +3807,7 @@ GameObject:
   - component: {fileID: 2082377941}
   - component: {fileID: 2082377940}
   - component: {fileID: 2082377938}
+  - component: {fileID: 2082377943}
   m_Layer: 0
   m_Name: Player Armature
   m_TagString: Player
@@ -4069,6 +4083,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2082377943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082377937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c87db939c2bdda7498fcf00798f3b03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KnockbackReceiver
 --- !u!1 &2105035520
 GameObject:
   m_ObjectHideFlags: 0

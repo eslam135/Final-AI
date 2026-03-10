@@ -64,4 +64,4 @@ public class Action_HealAllies : GoapAction
             Debug.Log($"  Healed {ally.name} → {ally.health}/{ally.maxHealth}");
         }
     }
-}   
+}
