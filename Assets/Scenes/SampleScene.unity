@@ -1116,6 +1116,7 @@ MonoBehaviour:
   - {fileID: 476952821}
   - {fileID: 0}
   castPoint: {fileID: 476952820}
+  meleeDamage: 10
 --- !u!1 &987706315
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,15 +1,21 @@
 using UnityEngine;
 using Pada1.BBCore;
-using Pada1.BBCore.Framework;
-
-[Condition("Conditions/Is Dead")]
-public class IsDead : ConditionBase
+using BBUnity.Conditions;
+public class IsDead : GOCondition 
 {
-    [InParam("Health")]
-    public float health;
+    private HealthView healthView;
 
     public override bool Check()
     {
-        return health <= 0;
+        if (healthView == null)
+            healthView = gameObject.GetComponent<HealthView>();
+
+        if (healthView == null)
+        {
+            Debug.LogWarning("HealthView component not found!");
+            return false;
+        }
+
+        return healthView.Health.currentHealth <= 0;
     }
 }
