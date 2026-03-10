@@ -17,7 +17,6 @@ public class Die : GOAction
         if (!isDead)
         {
             animator.SetBool("Run", false);
-            //animator.SetTrigger("Die");
             isDead = true;
         }
     }
