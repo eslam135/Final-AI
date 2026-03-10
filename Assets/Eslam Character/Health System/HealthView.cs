@@ -2,40 +2,20 @@ using UnityEngine;
 
 public class HealthView : MonoBehaviour
 {
-    float maxHealth = 100.0f;
+    private CapsuleCollider capsuleCollider;
+    [SerializeField] private float maxHealth = 100.0f;
     public Health Health;
     void Awake()
     {
+        capsuleCollider = GetComponent<CapsuleCollider>();
         Health = new Health(maxHealth);
         Health.OnDeath += HandleDeath;
-        Health.OnDamaged += HandleDamage;
-        Health.OnHealed += HandleHeal;
+        // Health.OnDamaged += HandleDamage;
+        // Health.OnHealed += HandleHeal;
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            Health.TakeDamage(20.0f);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            Health.TakeHeal(20.0f);
-        }
-    }
-    private void HandleDamage(float amount)
-    {
-        Debug.Log($"Took damage: {amount} Current Health: {Health.currentHealth}");
-    }
-    private void HandleHeal(float amount)
-    {
-        Debug.Log($"Took Heal: {amount} Current Health {Health.currentHealth}");
+        Debug.Log(Health.currentHealth);
     }
     private void HandleDeath()
     {
@@ -49,5 +29,21 @@ public class HealthView : MonoBehaviour
     {
         return Health.currentHealth;
     }
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(other.name + " entered the capsule trigger.");
 
+        if (other.gameObject.layer == LayerMask.NameToLayer("Spikes"))
+        {
+            Health.TakeDamage(15.0f);
+        }
+        if (other.gameObject.layer == LayerMask.NameToLayer("Projectile"))
+        {
+            Health.TakeDamage(10.0f);
+        }
+        if (other.gameObject.layer == LayerMask.NameToLayer("Melee"))
+        {
+            Health.TakeDamage(5.0f);
+        }
+    }
 }
