@@ -17,8 +17,7 @@ MonoBehaviour:
     version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
     id=\"0\" guid=\"7d58d7104e15ab445ab600c4fd79bbce\" nextId=\"27\">\r\n      <root>\r\n       
     <RepeatDecorator id=\"13\" />\r\n      </root>\r\n      <inputParams>\r\n       
-    <inputValues>\r\n          <entry name=\"Health\" type=\"System.Single\" isBlackboard=\"False\"
-    value=\"0\" />\r\n          <entry name=\"Spike Prefab\" type=\"UnityEngine.GameObject\"
+    <inputValues>\r\n          <entry name=\"Spike Prefab\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"False\" />\r\n          <entry name=\"Spike Range\" type=\"System.Single\"
     isBlackboard=\"False\" value=\"0\" />\r\n          <entry name=\"Spike Cooldown\"
     type=\"System.Single\" isBlackboard=\"False\" value=\"0\" />\r\n          <entry
@@ -123,7 +122,7 @@ MonoBehaviour:
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"11\" />\r\n          <SelectorNode id=\"26\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n    <ConditionNode id=\"3\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"True\" position=\"191.4503 331.119\" name=\"Conditions/Is
+    <data breakpoint=\"0\" selected=\"False\" position=\"194.117 331.119\" name=\"Conditions/Is
     Dead\" description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ConditionNode id=\"3\" />\r\n          <SequenceNode
     id=\"22\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionNode>\r\n   
@@ -145,6 +144,6 @@ MonoBehaviour:
     name=\"AlwaysTrue\" description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n 
     </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 0.5
+  zoom: 0.6
   subslist: []
   _guid: 7d58d7104e15ab445ab600c4fd79bbce

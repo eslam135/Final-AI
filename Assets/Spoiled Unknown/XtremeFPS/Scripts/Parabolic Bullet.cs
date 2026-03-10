@@ -98,7 +98,7 @@ namespace XtremeFPS.WeaponSystem
             {
                 HealthView v = hit.collider.gameObject.GetComponent<HealthView>();
                 if (v.GetHealth() > 0)
-                    v.Health.TakeDamage(100);
+                    v.Health.TakeDamage(10);
             }
             OnBulletDestroy();
         }

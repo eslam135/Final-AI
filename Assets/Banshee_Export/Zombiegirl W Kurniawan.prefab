@@ -119,6 +119,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1977eb127bf643c48889f083c8dfb6bc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9122404164451767384}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1977eb127bf643c48889f083c8dfb6bc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5338133258153769604}
   m_SourcePrefab: {fileID: 100100000, guid: 1977eb127bf643c48889f083c8dfb6bc, type: 3}
 --- !u!4 &751577419237726195 stripped
 Transform:
@@ -375,7 +378,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a516c9f42c9f642bdd1843677fba99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthView
-  maxHealth: 100
+  maxHealth: 300
+--- !u!114 &5338133258153769604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241357433588438378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f84d3a6c7bbc4746a5d50e1cd12fcc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MeleeAttack
 --- !u!4 &4773152523836792147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3321919801592875672, guid: 1977eb127bf643c48889f083c8dfb6bc, type: 3}
@@ -392,6 +407,10 @@ PrefabInstance:
     - target: {fileID: 1921079115439858272, guid: cf22afb314419024a912600068b12f79, type: 3}
       propertyPath: m_Name
       value: VFX_Shockwave_01_White_Big_500ms
+      objectReference: {fileID: 0}
+    - target: {fileID: 1921079115439858272, guid: cf22afb314419024a912600068b12f79, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3538315220092702340, guid: cf22afb314419024a912600068b12f79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -433,6 +452,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5732563041826830037, guid: cf22afb314419024a912600068b12f79, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7919850715758435701, guid: cf22afb314419024a912600068b12f79, type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -444,13 +467,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1921079115439858272, guid: cf22afb314419024a912600068b12f79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7822721018834737856}
   m_SourcePrefab: {fileID: 100100000, guid: cf22afb314419024a912600068b12f79, type: 3}
 --- !u!198 &3324412442636476715 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8564160281540680511, guid: cf22afb314419024a912600068b12f79, type: 3}
   m_PrefabInstance: {fileID: 6411065275038415380}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4778783888085833844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1921079115439858272, guid: cf22afb314419024a912600068b12f79, type: 3}
+  m_PrefabInstance: {fileID: 6411065275038415380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &7822721018834737856
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4778783888085833844}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.6939529
+  m_Center: {x: -0.13, y: -0.30603772, z: -0.00000007282272}
 --- !u!4 &7629716881229378704 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3538315220092702340, guid: cf22afb314419024a912600068b12f79, type: 3}

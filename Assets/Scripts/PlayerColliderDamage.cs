@@ -1,26 +1,25 @@
 using UnityEngine;
 
-
-
 public class PlayerColliderDamage : MonoBehaviour
 {
-
-
     HealthView healthView;
+
     void Start()
     {
         healthView = GetComponent<HealthView>();
+        healthView.Health.OnDeath += GameManager.Instance.RestartScene;
     }
 
     private void Update()
     {
-        Debug.Log(healthView.Health.currentHealth);
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.UpdateHealth(healthView.Health.currentHealth);
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name + " entered the capsule trigger.");
-
         if (other.gameObject.layer == LayerMask.NameToLayer("Spikes"))
         {
             healthView.Health.TakeDamage(15.0f);
