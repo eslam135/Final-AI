@@ -18,7 +18,7 @@ public class HealthView : MonoBehaviour
     {
         Debug.Log(Health.currentHealth);
     }
-    private void HandleDeath()
+    public void HandleDeath()
     {
         gameObject.GetComponent<Animator>()?.Play("Death");
         ScoreManager.Instance.AddScore();

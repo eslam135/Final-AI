@@ -54,6 +54,8 @@ public class Action_Melee : GOAction
 
     public override TaskStatus OnUpdate()
     {
+        if (gameObject.GetComponent<HealthView>().Health.currentHealth <= 0) return TaskStatus.FAILED;
+
         if (!isValidAttack) return TaskStatus.FAILED;
 
         if (target != null)
@@ -70,7 +72,7 @@ public class Action_Melee : GOAction
             hasHit = true;
             if (target != null && Vector3.Distance(gameObject.transform.position, target.position) <= damageRadius)
             {
-                PlayerHealthDummy playerHealth = target.GetComponent<PlayerHealthDummy>();
+                var playerHealth = target?.GetComponent<HealthView>().Health;
                 if (playerHealth != null) playerHealth.TakeDamage(meleeDamage);
             }
         }

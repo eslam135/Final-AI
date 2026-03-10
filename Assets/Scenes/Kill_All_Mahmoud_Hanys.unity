@@ -1959,7 +1959,7 @@ Transform:
   m_GameObject: {fileID: 1361835692}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.73, z: 0}
+  m_LocalPosition: {x: 0, y: 0.7299998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1992,7 +1992,7 @@ Transform:
   m_GameObject: {fileID: 1387662324}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -9.24, y: 0.842, z: 74.7}
+  m_LocalPosition: {x: -9.24, y: 3.8, z: 74.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3067,7 +3067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieWaveManager
   player: {fileID: 2082377939}
-  baseZombiePrefab: {fileID: 1626263385}
+  baseZombiePrefab: {fileID: 960036132}
   specialZombiePrefabs:
   - {fileID: 525426392}
   - {fileID: 1950841158}

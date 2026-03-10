@@ -29,6 +29,7 @@ public class Action_Chase : GOAction
 
     public override TaskStatus OnUpdate()
     {
+        if (gameObject.GetComponent<HealthView>().Health.currentHealth <= 0) {return TaskStatus.FAILED; } 
         if (target == null) return TaskStatus.FAILED;
 
         Vector3 myFlatPos = new Vector3(gameObject.transform.position.x, 0, gameObject.transform.position.z);

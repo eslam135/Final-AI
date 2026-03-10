@@ -53,6 +53,8 @@ public class Action_Throw : GOAction
 
     public override TaskStatus OnUpdate()
     {
+        if (gameObject.GetComponent<HealthView>().Health.currentHealth <= 0) return TaskStatus.FAILED;
+
         if (!isValidAttack) return TaskStatus.FAILED;
 
         if (target != null)

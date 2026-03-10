@@ -45,6 +45,17 @@ public class GoapAgent : MonoBehaviour
 
     private void Update()
     {
+        if(gameObject.GetComponentInChildren<HealthView>().Health.currentHealth<=0)
+        {
+            if (_currentAction != null)
+            {
+                _currentAction.OnEnd(_ctx);
+                _currentAction = null;
+                _actionInProgress = false;
+            }
+            gameObject.GetComponentInChildren<HealthView>().HandleDeath();
+            return; // dead, do nothing
+        }
         _sensor.Tick();
 
         // Only replan if no action is running or we're in a non-blocking action

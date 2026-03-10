@@ -20,7 +20,7 @@ public class DebrisProjectile : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerHealthDummy playerHealth = other.GetComponent<PlayerHealthDummy>();
+            var playerHealth = other?.GetComponent<HealthView>().Health;
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(damage);

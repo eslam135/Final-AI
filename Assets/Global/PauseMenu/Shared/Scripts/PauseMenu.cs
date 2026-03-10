@@ -8,6 +8,14 @@ public class PauseMenu : MonoBehaviour
 
     [Header("Menu")]
     [SerializeField] private GameObject menu;
+    private void Awake()
+    {
+        menu.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1.0f;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -29,6 +37,7 @@ public class PauseMenu : MonoBehaviour
     public void backToMainMenu()
     {
         Time.timeScale = 1f;
+        menu.SetActive(false);
         SceneManager.LoadScene("MainMenue");
     }
     public void QuitGame()
