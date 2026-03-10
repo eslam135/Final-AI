@@ -26,6 +26,7 @@ public class AttackHeavy : GOAction
         targetPosition = GameObject.FindGameObjectWithTag("Player");
         animator = gameObject.GetComponent<Animator>();
         animator.SetBool("Run", false);
+        gameObject.GetComponent<AudioListPlayer>()?.PlaySound(0);
     }
 
     public override TaskStatus OnUpdate()

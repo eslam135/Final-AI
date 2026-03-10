@@ -32,6 +32,7 @@ public class AttackGround : GOAction
         targetPosition = GameObject.FindGameObjectWithTag("Player");
         animator = gameObject.GetComponent<Animator>();
         isAttacking = false; 
+        gameObject.GetComponent<AudioListPlayer>()?.PlaySound(1);
     }
 
     public override TaskStatus OnUpdate()
