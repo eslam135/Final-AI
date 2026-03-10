@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class HealthView : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class HealthView : MonoBehaviour
     private void HandleDeath()
     {
         gameObject.GetComponent<Animator>()?.Play("Death");
+        ScoreManager.Instance.AddScore();
+        UIManager.Instance.UpdateScore();
     }
     public void setFalse()
     {
