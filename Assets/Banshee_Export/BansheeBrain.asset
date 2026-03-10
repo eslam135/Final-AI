@@ -1,0 +1,241 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: BansheeBrain
+  m_EditorClassIdentifier: 
+  brickName: Assets/Banshee_Export/BansheeBrain.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
+    id=\"0\" guid=\"8ee5d81a8a662b94ca6630c5586ae17e\" nextId=\"52\">\r\n      <root>\r\n       
+    <RepeatDecorator id=\"47\" />\r\n      </root>\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.Transform\"
+    isBlackboard=\"False\" />\r\n          <entry name=\"projectilePrefab\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"False\" />\r\n          <entry name=\"spawnPoint\" type=\"UnityEngine.Transform\"
+    isBlackboard=\"False\" />\r\n          <entry name=\"screamVFX\" type=\"UnityEngine.ParticleSystem\"
+    isBlackboard=\"False\" />\r\n          <entry name=\"Speed\" type=\"System.Single\"
+    isBlackboard=\"False\" value=\"0\" />\r\n          <entry name=\"Rotation Speed\"
+    type=\"System.Single\" isBlackboard=\"False\" value=\"0\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </BehaviorTree>\r\n   
+    <RepeatDecorator id=\"47\" loops=\"-1\" policy=\"ContinueWhenChildFails\">\r\n     
+    <child>\r\n        <PrioritySelectorNode id=\"48\" />\r\n      </child>\r\n     
+    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </RepeatDecorator>\r\n   
+    <PrioritySelectorNode id=\"48\">\r\n      <children>\r\n        <elem>\r\n         
+    <GuardAndNode>\r\n            <guard>\r\n              <ConditionEvalNode id=\"51\"
+    />\r\n            </guard>\r\n            <child>\r\n              <ActionNode
+    id=\"36\" />\r\n            </child>\r\n          </GuardAndNode>\r\n       
+    </elem>\r\n        <elem>\r\n          <GuardAndNode>\r\n            <guard>\r\n             
+    <ConditionEvalNode id=\"49\" />\r\n            </guard>\r\n            <child>\r\n             
+    <SelectorNode id=\"39\" />\r\n            </child>\r\n          </GuardAndNode>\r\n       
+    </elem>\r\n      </children>\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </PrioritySelectorNode>\r\n    <ConditionEvalNode
+    id=\"51\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"Banshee/Is Dead\">\r\n     
+    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
+    <ActionNode id=\"36\" action=\"Banshee/Die\">\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ConditionEvalNode
+    id=\"49\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"AlwaysTrue\">\r\n     
+    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
+    <SelectorNode id=\"39\">\r\n      <children>\r\n        <elem>\r\n          <SequenceNode
+    id=\"41\" />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode
+    id=\"43\" />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode
+    id=\"45\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"15\"
+    />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </SelectorNode>\r\n    <SequenceNode
+    id=\"41\">\r\n      <children>\r\n        <elem>\r\n          <ConditionNode
+    id=\"42\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"10\"
+    />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <SequenceNode
+    id=\"43\">\r\n      <children>\r\n        <elem>\r\n          <ConditionNode
+    id=\"44\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"20\"
+    />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <SequenceNode
+    id=\"45\">\r\n      <children>\r\n        <elem>\r\n          <ConditionNode
+    id=\"46\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"13\"
+    />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <ActionNode
+    id=\"15\" action=\"Banshee/Chase\">\r\n      <inputParams>\r\n        <inputValues>\r\n         
+    <entry name=\"target\" type=\"UnityEngine.Transform\" isBlackboard=\"True\" blackboard=\"target\"
+    />\r\n          <entry name=\"Speed\" type=\"System.Single\" isBlackboard=\"True\"
+    blackboard=\"Speed\" />\r\n          <entry name=\"Rotation Speed\" type=\"System.Single\"
+    isBlackboard=\"True\" blackboard=\"Rotation Speed\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
+    <ConditionNode id=\"42\">\r\n      <condition>\r\n        <ConditionEvalNode
+    id=\"0\" />\r\n      </condition>\r\n      <inputParams>\r\n        <inputValues>\r\n         
+    <entry name=\"target\" type=\"UnityEngine.Transform\" isBlackboard=\"True\" blackboard=\"target\"
+    />\r\n          <entry name=\"minDistance\" type=\"System.Single\" isBlackboard=\"False\"
+    value=\"0\" />\r\n          <entry name=\"maxDistance\" type=\"System.Single\"
+    isBlackboard=\"False\" value=\"2\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </ConditionNode>\r\n    <ActionNode
+    id=\"10\" action=\"Banshee/Scream Attack\">\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.Transform\"
+    isBlackboard=\"True\" blackboard=\"target\" />\r\n          <entry name=\"screamVFX\"
+    type=\"UnityEngine.ParticleSystem\" isBlackboard=\"True\" blackboard=\"screamVFX\"
+    />\r\n          <entry name=\"attackDuration\" type=\"System.Single\" isBlackboard=\"False\"
+    value=\"2.5\" />\r\n          <entry name=\"screamHitTime\" type=\"System.Single\"
+    isBlackboard=\"False\" value=\"0.5\" />\r\n          <entry name=\"screamDamage\"
+    type=\"System.Int32\" isBlackboard=\"False\" value=\"30\" />\r\n          <entry
+    name=\"damageRadius\" type=\"System.Single\" isBlackboard=\"False\" value=\"2.5\"
+    />\r\n          <entry name=\"cooldownTime\" type=\"System.Single\" isBlackboard=\"False\"
+    value=\"4\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ConditionNode id=\"44\">\r\n     
+    <condition>\r\n        <ConditionEvalNode id=\"0\" />\r\n      </condition>\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.Transform\"
+    isBlackboard=\"True\" blackboard=\"target\" />\r\n          <entry name=\"minDistance\"
+    type=\"System.Single\" isBlackboard=\"False\" value=\"0\" />\r\n          <entry
+    name=\"maxDistance\" type=\"System.Single\" isBlackboard=\"False\" value=\"2\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n     
+    <localParams />\r\n    </ConditionNode>\r\n    <ActionNode id=\"20\" action=\"Banshee/Melee
+    Attack\">\r\n      <inputParams>\r\n        <inputValues>\r\n          <entry
+    name=\"target\" type=\"UnityEngine.Transform\" isBlackboard=\"True\" blackboard=\"target\"
+    />\r\n          <entry name=\"attackDuration\" type=\"System.Single\" isBlackboard=\"False\"
+    value=\"2\" />\r\n          <entry name=\"hitTime\" type=\"System.Single\" isBlackboard=\"False\"
+    value=\"0.5\" />\r\n          <entry name=\"meleeDamage\" type=\"System.Int32\"
+    isBlackboard=\"False\" value=\"10\" />\r\n          <entry name=\"cooldownTime\"
+    type=\"System.Single\" isBlackboard=\"False\" value=\"2.5\" />\r\n          <entry
+    name=\"damageRadius\" type=\"System.Single\" isBlackboard=\"False\" value=\"2.5\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n     
+    <localParams />\r\n    </ActionNode>\r\n    <ConditionNode id=\"46\">\r\n     
+    <condition>\r\n        <ConditionEvalNode id=\"0\" />\r\n      </condition>\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.Transform\"
+    isBlackboard=\"True\" blackboard=\"target\" />\r\n          <entry name=\"minDistance\"
+    type=\"System.Single\" isBlackboard=\"False\" value=\"5\" />\r\n          <entry
+    name=\"maxDistance\" type=\"System.Single\" isBlackboard=\"False\" value=\"12\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n     
+    <localParams />\r\n    </ConditionNode>\r\n    <ActionNode id=\"13\" action=\"Banshee/Throw
+    Attack\">\r\n      <inputParams>\r\n        <inputValues>\r\n          <entry
+    name=\"target\" type=\"UnityEngine.Transform\" isBlackboard=\"True\" blackboard=\"target\"
+    />\r\n          <entry name=\"projectilePrefab\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" blackboard=\"projectilePrefab\" />\r\n          <entry
+    name=\"spawnPoint\" type=\"UnityEngine.Transform\" isBlackboard=\"True\" blackboard=\"spawnPoint\"
+    />\r\n          <entry name=\"attackDuration\" type=\"System.Single\" isBlackboard=\"False\"
+    value=\"2\" />\r\n          <entry name=\"throwReleaseTime\" type=\"System.Single\"
+    isBlackboard=\"False\" value=\"0.8\" />\r\n          <entry name=\"cooldownTime\"
+    type=\"System.Single\" isBlackboard=\"False\" value=\"5\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
+    <ConditionEvalNode id=\"0\" policy=\"ATOMIC_CHECK\" name=\"Banshee/Check Distance
+    Range\">\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </ConditionEvalNode>\r\n  </runtimeInfo>\r\n  <editorInfo>\r\n    <BehaviorTree
+    id=\"0\" _name=\"BansheeBrain\" _description=\"\" _removeIfClosed=\"False\">\r\n     
+    <_rootList>\r\n        <elem>\r\n          <ActionNode id=\"10\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <ActionNode id=\"13\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ActionNode id=\"15\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ActionNode id=\"20\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
+    id=\"36\" />\r\n        </elem>\r\n        <elem>\r\n          <SelectorNode
+    id=\"39\" />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode
+    id=\"41\" />\r\n        </elem>\r\n        <elem>\r\n          <ConditionNode
+    id=\"42\" />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode
+    id=\"43\" />\r\n        </elem>\r\n        <elem>\r\n          <ConditionNode
+    id=\"44\" />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode
+    id=\"45\" />\r\n        </elem>\r\n        <elem>\r\n          <ConditionNode
+    id=\"46\" />\r\n        </elem>\r\n        <elem>\r\n          <RepeatDecorator
+    id=\"47\" />\r\n        </elem>\r\n        <elem>\r\n          <PrioritySelectorNode
+    id=\"48\" />\r\n        </elem>\r\n        <elem>\r\n          <ConditionEvalNode
+    id=\"49\" />\r\n        </elem>\r\n        <elem>\r\n          <ConditionEvalNode
+    id=\"51\" />\r\n        </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n       
+    <nodes>\r\n          <RepeatDecorator id=\"47\" />\r\n          <SequenceNode
+    id=\"41\" />\r\n          <ActionNode id=\"10\" />\r\n          <SelectorNode
+    id=\"39\" />\r\n          <ActionNode id=\"13\" />\r\n          <ActionNode id=\"15\"
+    />\r\n          <ActionNode id=\"20\" />\r\n          <ConditionNode id=\"42\"
+    />\r\n          <ConditionEvalNode id=\"51\" />\r\n          <ActionNode id=\"36\"
+    />\r\n          <SequenceNode id=\"43\" />\r\n          <ConditionNode id=\"44\"
+    />\r\n          <SequenceNode id=\"45\" />\r\n          <ConditionNode id=\"46\"
+    />\r\n          <PrioritySelectorNode id=\"48\" />\r\n          <ConditionEvalNode
+    id=\"49\" />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n   
+    <RepeatDecorator id=\"47\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"1359.007 -41.8931\" name=\"Repeat\" description=\"Repeats
+    the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"47\" />\r\n       
+    </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <PrioritySelectorNode
+    id=\"48\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"1306.208 134.1071\" name=\"Priority Selector\" description=\"\" cardinality=\"1\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <PrioritySelectorNode
+    id=\"48\" />\r\n          <RepeatDecorator id=\"47\" />\r\n        </data>\r\n     
+    </_data>\r\n    </PrioritySelectorNode>\r\n    <ConditionEvalNode id=\"51\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"939.406
+    1436.507\" name=\"Banshee/Is Dead\" description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode id=\"51\" />\r\n         
+    <PrioritySelectorNode id=\"48\" />\r\n        </data>\r\n      </_data>\r\n   
+    </ConditionEvalNode>\r\n    <ActionNode id=\"36\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"781.007 673.3073\" name=\"Banshee/Die\"
+    description=\"\" cardinality=\"0\" hasParent=\"False\">\r\n          <BehaviorTree
+    id=\"36\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <ConditionEvalNode id=\"49\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"1823.007 738.9068\" name=\"AlwaysTrue\" description=\"Eval\"
+    cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <ConditionEvalNode id=\"49\" />\r\n          <PrioritySelectorNode id=\"48\"
+    />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <SelectorNode
+    id=\"39\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"1323.807 302.1071\" name=\"Selector\" description=\"Executes all its
+    children until one of them is successful\" cardinality=\"-1\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"39\" />\r\n        </data>\r\n      </_data>\r\n    </SelectorNode>\r\n   
+    <SequenceNode id=\"41\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"1304.607 486.1072\" name=\"Sequence\" description=\"Executes all its
+    children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"39\" />\r\n          <SequenceNode id=\"41\" />\r\n         
+    <SelectorNode id=\"39\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
+    <SequenceNode id=\"43\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"1803.807 556.5071\" name=\"Sequence\" description=\"Executes all its
+    children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"39\" />\r\n          <SequenceNode id=\"43\" />\r\n         
+    <SelectorNode id=\"39\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
+    <SequenceNode id=\"45\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"2141.807 568.5071\" name=\"Sequence\" description=\"Executes all its
+    children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"39\" />\r\n          <SequenceNode id=\"45\" />\r\n         
+    <SelectorNode id=\"39\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
+    <ActionNode id=\"15\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"2761.811 473.1745\" name=\"Banshee/Chase\" description=\"\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"39\" />\r\n          <SelectorNode
+    id=\"39\" />\r\n          <SelectorNode id=\"39\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n    <ConditionNode id=\"42\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"1175.007 700.5071\" name=\"Banshee/Check
+    Distance Range\" description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"39\" />\r\n          <ConditionNode id=\"42\" />\r\n         
+    <SequenceNode id=\"41\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionNode>\r\n   
+    <ActionNode id=\"10\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"1461.041 725.4506\" name=\"Banshee/Scream Attack\" description=\"\"
+    cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"39\" />\r\n         
+    <SequenceNode id=\"41\" />\r\n          <SequenceNode id=\"41\" />\r\n       
+    </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ConditionNode id=\"44\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"1707.807
+    711.7071\" name=\"Banshee/Check Distance Range\" description=\"\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"39\" />\r\n          <ConditionNode
+    id=\"44\" />\r\n          <SequenceNode id=\"43\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ConditionNode>\r\n    <ActionNode id=\"20\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"1999.939 713.272\" name=\"Banshee/Melee
+    Attack\" description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"39\" />\r\n          <SequenceNode id=\"43\" />\r\n         
+    <SequenceNode id=\"43\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <ConditionNode id=\"46\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"2219.807 722.9069\" name=\"Banshee/Check Distance
+    Range\" description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"39\" />\r\n          <ConditionNode id=\"46\" />\r\n          <SequenceNode
+    id=\"45\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionNode>\r\n   
+    <ActionNode id=\"13\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"2481.179 725.0653\" name=\"Banshee/Throw Attack\" description=\"\"
+    cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"39\" />\r\n         
+    <SequenceNode id=\"45\" />\r\n          <SequenceNode id=\"45\" />\r\n       
+    </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"0\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"0 0\"
+    name=\"AlwaysTrue\" description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n 
+    </editorInfo>\r\n  <runtimeInfo>\r\n    <BehaviorTree id=\"36\" nextId=\"1\">\r\n     
+    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </BehaviorTree>\r\n   
+    <BehaviorTree id=\"39\" nextId=\"1\">\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </BehaviorTree>\r\n  </runtimeInfo>\r\n  <editorInfo>\r\n   
+    <BehaviorTree id=\"36\" _removeIfClosed=\"False\">\r\n      <_rootList />\r\n     
+    <_nodes>\r\n        <nodes />\r\n      </_nodes>\r\n    </BehaviorTree>\r\n   
+    <BehaviorTree id=\"39\" _removeIfClosed=\"False\">\r\n      <_rootList />\r\n     
+    <_nodes>\r\n        <nodes />\r\n      </_nodes>\r\n    </BehaviorTree>\r\n 
+    </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 0.5
+  subslist: []
+  _guid: 8ee5d81a8a662b94ca6630c5586ae17e
