@@ -320,6 +320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookHeadMonster
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 939dd2b1b2633e840b9645b503fa3457, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -591,15 +595,15 @@ MonoBehaviour:
   m_text: 'Keeps stalking the player until it reaches a certain range and starts
     attacking him.
 
-    
 
-    If its health gets really low, it flees the scene,
-    and starts attacking from a distance using spells.
 
-    
+    If its health gets really low, it flees the scene, and
+    starts attacking from a distance using spells.
 
-    It chooses between
-    2 spells one that heals it and the other penetrates the player with spikes.'
+
+
+    It chooses between 2 spells
+    one that heals it and the other penetrates the player with spikes.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1782,16 +1786,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Chase: Relentlessly chases the player to close the distance.
 
-    
+
 
     Choose
     Attack: When in range, it decides between different attack types depending on
     the situation.
 
-    
 
-    Attacks: It can perform a heavy melee slam or summon
-    spikes to damage the player.'
+
+    Attacks: It can perform a heavy melee slam or summon spikes
+    to damage the player.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2882,7 +2886,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4281479730
   m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2895,7 +2899,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -3224,7 +3228,7 @@ RectTransform:
   m_Father: {fileID: 1608774594261118163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.2, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}

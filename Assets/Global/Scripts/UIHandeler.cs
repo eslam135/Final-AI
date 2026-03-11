@@ -43,8 +43,8 @@ public class UIHandeler : MonoBehaviour
         startButton.onClick.AddListener(StartGame);
 
         settingsButton.onClick.AddListener(() => ChangeMenu(CurrentMenu.Settings));
-        levelsButton.onClick.AddListener(() => ChangeMenu(CurrentMenu.Inventory));
-
+/*        levelsButton.onClick.AddListener(() => ChangeMenu(CurrentMenu.Inventory));
+*/
 
         backButtonSettings.onClick.AddListener(() => ChangeMenu(CurrentMenu.MainMenu));
         backButtonGame.onClick.AddListener(() => ChangeMenu(CurrentMenu.MainMenu));
